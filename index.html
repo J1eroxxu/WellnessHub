@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellnessHub - Mental & Physical Wellness Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🌟 WellnessHub</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#mental">Mental Wellness</a></li>
+                <li><a href="#physical">Physical Wellness</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Your Complete Wellness Companion</h1>
+            <p>Nurture your mind AND move your body. All in one platform.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('mental').scrollIntoView({behavior: 'smooth'})">Start Wellness Journey</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('physical').scrollIntoView({behavior: 'smooth'})">Get Moving</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mental Wellness Section -->
+    <section id="mental" class="mental-wellness">
+        <div class="container">
+            <h2>🧠 Mental Wellness</h2>
+            <p class="section-subtitle">Check in with your mind, manage stress, and find peace</p>
+            
+            <div class="mental-grid">
+                <!-- Mood Tracker -->
+                <div class="card">
+                    <h3>Mood Tracker</h3>
+                    <p>How are you feeling today?</p>
+                    <div class="mood-buttons">
+                        <button class="mood amazing" title="Amazing">🌟 Amazing</button>
+                        <button class="mood good" title="Good">😊 Good</button>
+                        <button class="mood okay" title="Okay">😐 Okay</button>
+                        <button class="mood stressed" title="Stressed">😰 Stressed</button>
+                        <button class="mood overwhelmed" title="Overwhelmed">😔 Overwhelmed</button>
+                    </div>
+                </div>
+
+                <!-- Grounding Exercises -->
+                <div class="card">
+                    <h3>Grounding Exercises</h3>
+                    <p>Quick techniques to ground yourself</p>
+                    <ul class="exercises-list">
+                        <li>
+                            <strong>5-4-3-2-1 Technique</strong>
+                            <span>3-5 min • Engage your senses</span>
+                            <button class="btn-small" onclick="startExercise('5-4-3-2-1')">Start</button>
+                        </li>
+                        <li>
+                            <strong>Box Breathing</strong>
+                            <span>2-3 min • Balance your nervous system</span>
+                            <button class="btn-small" onclick="startExercise('Box Breathing')">Start</button>
+                        </li>
+                        <li>
+                            <strong>Progressive Relaxation</strong>
+                            <span>5-10 min • Release tension</span>
+                            <button class="btn-small" onclick="startExercise('Progressive Relaxation')">Start</button>
+                        </li>
+                        <li>
+                            <strong>Mindful Grounding</strong>
+                            <span>2-3 min • Immediate relief</span>
+                            <button class="btn-small" onclick="startExercise('Mindful Grounding')">Start</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AI Chatbot -->
+                <div class="card">
+                    <h3>💙 Wellness Assistant</h3>
+                    <p>Talk to our AI wellness companion</p>
+                    <div class="chat-preview">
+                        <p class="chat-message">Welcome to your wellness check-in! I'm here to support you with stress relief, grounding exercises, and emotional guidance.</p>
+                        <button class="btn-small" onclick="openChat()">Open Chat</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mental Wellness Benefits -->
+            <div class="benefits">
+                <div class="benefit-item">
+                    <h4>🛡️ Your Safe Space</h4>
+                    <p>Non-judgmental environment to express yourself freely</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>📚 Evidence-Based</h4>
+                    <p>Grounded in psychology and mindfulness research</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🔒 Privacy First</h4>
+                    <p>All conversations stored locally, never shared</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>⏰ Always Available</h4>
+                    <p>Get support anytime, anywhere, even offline</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Physical Wellness Section -->
+    <section id="physical" class="physical-wellness">
+        <div class="container">
+            <h2>💪 Physical Wellness</h2>
+            <p class="section-subtitle">Get moving in 5 minutes. No gym, no equipment, no excuses.</p>
+            
+            <div class="movement-categories">
+                <div class="category-card">
+                    <h3>🏋️‍♀️ Quick Workouts</h3>
+                    <p>5, 10, or 15-minute routines that actually work</p>
+                    <p class="highlight">Perfect for study breaks</p>
+                </div>
+                <div class="category-card">
+                    <h3>🧘‍♀️ Stretch Routines</h3>
+                    <p>Target neck, shoulders, back, and hips</p>
+                    <p class="highlight">Undo the damage from sitting</p>
+                </div>
+                <div class="category-card">
+                    <h3>🚶‍♂️ Daily Movement Tips</h3>
+                    <p>Smart reminders and micro-movements</p>
+                    <p class="highlight">Works anywhere, anytime</p>
+                </div>
+                <div class="category-card">
+                    <h3>🤖 AI Coach</h3>
+                    <p>Questions about routines, form, or motivation?</p>
+                    <p class="highlight">Chat with your personal coach</p>
+                </div>
+            </div>
+
+            <!-- Workout Stats -->
+            <div class="stats">
+                <div class="stat">
+                    <h4>5-15 min</h4>
+                    <p>Quick Sessions</p>
+                </div>
+                <div class="stat">
+                    <h4>0 Equipment</h4>
+                    <p>Everything you need</p>
+                </div>
+                <div class="stat">
+                    <h4>24/7</h4>
+                    <p>Available Anywhere</p>
+                </div>
+                <div class="stat">
+                    <h4>📱</h4>
+                    <p>Mobile Friendly</p>
+                </div>
+            </div>
+
+            <!-- Workout Reminder -->
+            <div class="reminder-section">
+                <h3>📅 Set Your Workout Reminder</h3>
+                <button class="btn btn-primary" onclick="openReminder()">Add to Calendar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why WellnessHub?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <span class="feature-icon">✨</span>
+                    <h3>Holistic Wellness</h3>
+                    <p>Address both mental and physical health in one place</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🧠</span>
+                    <h3>AI-Powered Support</h3>
+                    <p>Personalized guidance from intelligent coaching</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📊</span>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your mood and movement habits</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Goal-Oriented</h3>
+                    <p>Set and achieve wellness goals with ease</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Privacy Protected</h3>
+                    <p>Your data stays with you, completely secure</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Quick & Easy</h3>
+                    <p>Fits into your busy schedule seamlessly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Note Section -->
+    <section class="important-note">
+        <div class="container">
+            <h3>⚠️ Important Note</h3>
+            <p>WellnessHub is a supportive tool designed to help with wellness, stress management, and physical fitness. It is not a substitute for professional mental health treatment or medical advice. If you're experiencing serious mental health concerns or physical pain, please reach out to a mental health professional, doctor, or crisis service.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About WellnessHub</h2>
+            <p>WellnessHub is your complete wellness companion, combining evidence-based mental health support with practical fitness guidance. We believe true wellness requires both a healthy mind and an active body.</p>
+            <div class="about-features">
+                <div class="about-item">
+                    <h4>🧠 Mental Wellness</h4>
+                    <p>Stress relief, mood tracking, and grounding exercises developed with psychological research</p>
+                </div>
+                <div class="about-item">
+                    <h4>💪 Physical Wellness</h4>
+                    <p>Accessible workouts and stretches designed for busy people who want to move more</p>
+                </div>
+                <div class="about-item">
+                    <h4>🤖 AI Support</h4>
+                    <p>Intelligent coaching available 24/7 to guide your wellness journey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 WellnessHub. Created with care for your mental and physical wellness.</p>
+            <p>Your mind AND body matter. We're here to support you. 💙💚</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Chat -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeChat()">&times;</span>
+            <h3>💙 Wellness Assistant</h3>
+            <div class="chat-box">
+                <div class="chat-message bot-message">
+                    <p>Welcome to your wellness check-in! 💙</p>
+                    <p>I'm here to support you with stress relief, grounding exercises, and emotional guidance.</p>
+                    <p><strong>Let's start: How are you feeling right now?</strong></p>
+                </div>
+                <div class="chat-options">
+                    <button onclick="sendMessage('I need help managing stress')">I need help managing stress</button>
+                    <button onclick="sendMessage('Guide me through grounding')">Guide me through grounding</button>
+                    <button onclick="sendMessage('I\'m feeling anxious')">I'm feeling anxious</button>
+                    <button onclick="sendMessage('Help with burnout')">Help with burnout</button>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+            <p class="privacy-note">💙 This is a safe space. Your mental health matters. All conversations are stored locally.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Reminder -->
+    <div id="reminderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReminder()">&times;</span>
+            <h3>📅 Set Workout Reminder</h3>
+            <form id="reminderForm">
+                <label for="reminderDate">Date:</label>
+                <input type="date" id="reminderDate" required>
+                
+                <label for="reminderTime">Time:</label>
+                <input type="time" id="reminderTime" required>
+                
+                <label for="reminderType">Workout Type:</label>
+                <select id="reminderType">
+                    <option>Quick Workout (5 min)</option>
+                    <option>Regular Workout (10 min)</option>
+                    <option>Full Workout (15 min)</option>
+                    <option>Stretch Routine</option>
+                    <option>Movement Tips</option>
+                </select>
+                
+                <button type="submit" class="btn btn-primary">Add to Calendar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Exercises -->
+    <div id="exerciseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeExercise()">&times;</span>
+            <h2 id="exerciseName"></h2>
+            <div id="exerciseContent"></div>
+            <button class="btn btn-primary" onclick="closeExercise()">Complete</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
