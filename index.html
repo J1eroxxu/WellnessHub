@@ -12,31 +12,89 @@
         <div class="container">
             <div class="logo">🌟 WellnessHub</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#mental">Mental Wellness</a></li>
-                <li><a href="#physical">Physical Wellness</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mental-wellness.html">Mental Wellness</a></li>
+                <li><a href="physical-wellness.html">Physical Wellness</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Hero Section with Poster -->
+    <section class="hero-home">
+        <div class="poster-section">
+            <img src="poster.png" alt="WellnessHub Poster" class="poster-image">
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
         <div class="container">
-            <h1>Your Complete Wellness Companion</h1>
-            <p>Nurture your mind AND move your body. All in one platform.</p>
-            <div class="cta-buttons">
-                <button class="btn btn-primary" onclick="document.getElementById('mental').scrollIntoView({behavior: 'smooth'})">Start Wellness Journey</button>
-                <button class="btn btn-secondary" onclick="document.getElementById('physical').scrollIntoView({behavior: 'smooth'})">Get Moving</button>
+            <h2>Welcome to Your Wellness Journey</h2>
+            <div class="video-container">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="WellnessHub Introduction" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+            </div>
+            <p class="video-description">Watch our introduction video to learn how WellnessHub can help you achieve complete wellness - for both your mind and body.</p>
+        </div>
+    </section>
+
+    <!-- Quick Navigation Cards -->
+    <section class="quick-nav">
+        <div class="container">
+            <h2>Explore Our Services</h2>
+            <div class="nav-cards">
+                <div class="nav-card">
+                    <h3>🧠 Mental Wellness</h3>
+                    <p>Check in with your mind, manage stress, and find peace</p>
+                    <a href="mental-wellness.html" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="nav-card">
+                    <h3>💪 Physical Wellness</h3>
+                    <p>Get moving in 5 minutes. No gym, no equipment, no excuses.</p>
+                    <a href="physical-wellness.html" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="nav-card">
+                    <h3>✨ Features</h3>
+                    <p>Discover why WellnessHub is your perfect companion</p>
+                    <a href="features.html" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="nav-card">
+                    <h3>ℹ️ About Us</h3>
+                    <p>Learn about our mission and approach to wellness</p>
+                    <a href="about.html" class="btn btn-primary">Learn More</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Mental Wellness Section -->
-    <section id="mental" class="mental-wellness">
+    <!-- Call to Action -->
+    <section class="cta-section">
         <div class="container">
-            <h2>🧠 Mental Wellness</h2>
+            <h2>Your Wellness Journey Starts Here</h2>
+            <p>Choose the wellness path that matters most to you</p>
+            <div class="cta-buttons">
+                <a href="mental-wellness.html" class="btn btn-primary">Start Mental Wellness</a>
+                <a href="physical-wellness.html" class="btn btn-secondary">Start Physical Wellness</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 WellnessHub. Created with care for your mental and physical wellness.</p>
+            <p>Your mind AND body matter. We're here to support you. 💙💚</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
             <p class="section-subtitle">Check in with your mind, manage stress, and find peace</p>
             
             <div class="mental-grid">

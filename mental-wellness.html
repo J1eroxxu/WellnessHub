@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Wellness - WellnessHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">🌟 WellnessHub</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mental-wellness.html">Mental Wellness</a></li>
+                <li><a href="physical-wellness.html">Physical Wellness</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mental Wellness Section -->
+    <section class="mental-wellness-page">
+        <div class="container">
+            <h1>🧠 Mental Wellness</h1>
+            <p class="section-subtitle">Check in with your mind, manage stress, and find peace</p>
+            
+            <div class="mental-grid">
+                <!-- Mood Tracker -->
+                <div class="card">
+                    <h3>Mood Tracker</h3>
+                    <p>How are you feeling today?</p>
+                    <div class="mood-buttons">
+                        <button class="mood amazing" title="Amazing">🌟 Amazing</button>
+                        <button class="mood good" title="Good">😊 Good</button>
+                        <button class="mood okay" title="Okay">😐 Okay</button>
+                        <button class="mood stressed" title="Stressed">😰 Stressed</button>
+                        <button class="mood overwhelmed" title="Overwhelmed">😔 Overwhelmed</button>
+                    </div>
+                </div>
+
+                <!-- Grounding Exercises -->
+                <div class="card">
+                    <h3>Grounding Exercises</h3>
+                    <p>Quick techniques to ground yourself</p>
+                    <ul class="exercises-list">
+                        <li>
+                            <strong>5-4-3-2-1 Technique</strong>
+                            <span>3-5 min • Engage your senses</span>
+                            <button class="btn-small" onclick="startExercise('5-4-3-2-1')">Start</button>
+                        </li>
+                        <li>
+                            <strong>Box Breathing</strong>
+                            <span>2-3 min • Balance your nervous system</span>
+                            <button class="btn-small" onclick="startExercise('Box Breathing')">Start</button>
+                        </li>
+                        <li>
+                            <strong>Progressive Relaxation</strong>
+                            <span>5-10 min • Release tension</span>
+                            <button class="btn-small" onclick="startExercise('Progressive Relaxation')">Start</button>
+                        </li>
+                        <li>
+                            <strong>Mindful Grounding</strong>
+                            <span>2-3 min • Immediate relief</span>
+                            <button class="btn-small" onclick="startExercise('Mindful Grounding')">Start</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AI Chatbot -->
+                <div class="card">
+                    <h3>💙 Wellness Assistant</h3>
+                    <p>Talk to our AI wellness companion</p>
+                    <div class="chat-preview">
+                        <p class="chat-message">Welcome to your wellness check-in! I'm here to support you with stress relief, grounding exercises, and emotional guidance.</p>
+                        <button class="btn-small" onclick="openChat()">Open Chat</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mental Wellness Benefits -->
+            <div class="benefits">
+                <div class="benefit-item">
+                    <h4>🛡️ Your Safe Space</h4>
+                    <p>Non-judgmental environment to express yourself freely</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>📚 Evidence-Based</h4>
+                    <p>Grounded in psychology and mindfulness research</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🔒 Privacy First</h4>
+                    <p>All conversations stored locally, never shared</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>⏰ Always Available</h4>
+                    <p>Get support anytime, anywhere, even offline</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Note Section -->
+    <section class="important-note">
+        <div class="container">
+            <h3>⚠️ Important Note</h3>
+            <p>WellnessHub is a supportive tool designed to help with wellness and stress management. It is not a substitute for professional mental health treatment or medical advice. If you're experiencing serious mental health concerns, please reach out to a mental health professional, doctor, or crisis service.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 WellnessHub. Created with care for your mental and physical wellness.</p>
+            <p>Your mind AND body matter. We're here to support you. 💙💚</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Chat -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeChat()">&times;</span>
+            <h3>💙 Wellness Assistant</h3>
+            <div class="chat-box">
+                <div class="chat-message bot-message">
+                    <p>Welcome to your wellness check-in! 💙</p>
+                    <p>I'm here to support you with stress relief, grounding exercises, and emotional guidance.</p>
+                    <p><strong>Let's start: How are you feeling right now?</strong></p>
+                </div>
+                <div class="chat-options">
+                    <button onclick="sendMessage('I need help managing stress')">I need help managing stress</button>
+                    <button onclick="sendMessage('Guide me through grounding')">Guide me through grounding</button>
+                    <button onclick="sendMessage('I\'m feeling anxious')">I'm feeling anxious</button>
+                    <button onclick="sendMessage('Help with burnout')">Help with burnout</button>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+            <p class="privacy-note">💙 This is a safe space. Your mental health matters. All conversations are stored locally.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Exercises -->
+    <div id="exerciseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeExercise()">&times;</span>
+            <h2 id="exerciseName"></h2>
+            <div id="exerciseContent"></div>
+            <button class="btn btn-primary" onclick="closeExercise()">Complete</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

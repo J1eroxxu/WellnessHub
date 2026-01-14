@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Wellness - WellnessHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">🌟 WellnessHub</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mental-wellness.html">Mental Wellness</a></li>
+                <li><a href="physical-wellness.html">Physical Wellness</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Physical Wellness Section -->
+    <section class="physical-wellness-page">
+        <div class="container">
+            <h1>💪 Physical Wellness</h1>
+            <p class="section-subtitle">Get moving in 5 minutes. No gym, no equipment, no excuses.</p>
+            
+            <div class="movement-categories">
+                <div class="category-card">
+                    <h3>🏋️‍♀️ Quick Workouts</h3>
+                    <p>5, 10, or 15-minute routines that actually work</p>
+                    <p class="highlight">Perfect for study breaks</p>
+                </div>
+                <div class="category-card">
+                    <h3>🧘‍♀️ Stretch Routines</h3>
+                    <p>Target neck, shoulders, back, and hips</p>
+                    <p class="highlight">Undo the damage from sitting</p>
+                </div>
+                <div class="category-card">
+                    <h3>🚶‍♂️ Daily Movement Tips</h3>
+                    <p>Smart reminders and micro-movements</p>
+                    <p class="highlight">Works anywhere, anytime</p>
+                </div>
+                <div class="category-card">
+                    <h3>🤖 AI Coach</h3>
+                    <p>Questions about routines, form, or motivation?</p>
+                    <p class="highlight">Chat with your personal coach</p>
+                </div>
+            </div>
+
+            <!-- Workout Stats -->
+            <div class="stats">
+                <div class="stat">
+                    <h4>5-15 min</h4>
+                    <p>Quick Sessions</p>
+                </div>
+                <div class="stat">
+                    <h4>0 Equipment</h4>
+                    <p>Everything you need</p>
+                </div>
+                <div class="stat">
+                    <h4>24/7</h4>
+                    <p>Available Anywhere</p>
+                </div>
+                <div class="stat">
+                    <h4>📱</h4>
+                    <p>Mobile Friendly</p>
+                </div>
+            </div>
+
+            <!-- Workout Reminder -->
+            <div class="reminder-section">
+                <h3>📅 Set Your Workout Reminder</h3>
+                <button class="btn btn-primary" onclick="openReminder()">Add to Calendar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 WellnessHub. Created with care for your mental and physical wellness.</p>
+            <p>Your mind AND body matter. We're here to support you. 💙💚</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Reminder -->
+    <div id="reminderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReminder()">&times;</span>
+            <h3>📅 Set Workout Reminder</h3>
+            <form id="reminderForm">
+                <label for="reminderDate">Date:</label>
+                <input type="date" id="reminderDate" required>
+                
+                <label for="reminderTime">Time:</label>
+                <input type="time" id="reminderTime" required>
+                
+                <label for="reminderType">Workout Type:</label>
+                <select id="reminderType">
+                    <option>Quick Workout (5 min)</option>
+                    <option>Regular Workout (10 min)</option>
+                    <option>Full Workout (15 min)</option>
+                    <option>Stretch Routine</option>
+                    <option>Movement Tips</option>
+                </select>
+                
+                <button type="submit" class="btn btn-primary">Add to Calendar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
